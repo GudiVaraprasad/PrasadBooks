@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Gudi Varaprasad Books">
+
+  <title>PRASAD PROJECTS</title>
+  <link rel="icon" type="image/png" href="./book.png" />
+
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PDF CDN Link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.1.81/pdf.min.js"
+    integrity="sha512-RV+l/3iMDTmIt64ztJmriqLRZl2IwGHcG+655gFxUa20Uq9GljEsY3wibq5BZkGzRlMbYFHUPelVQvWvZxP38w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+  <!-- Books section starts  -->
+  <section class="none projectTemp" id="projectTemp">
+  </section>
+
+  <section class="project" id="project">
+
+    <h1 style="font-family: 'Satisfy', cursive; font-size: 10rem;" class="text-center mb-5"><span
+        style="font-family: 'Satisfy', cursive;">Prasad</span> Books</h1>
+    <a href="https://gudivaraprasad.github.io"><button class="btn"><i class="fas fa-chevron-circle-left"></i> Back
+        to
+        Profile</button></a>
+
+    <div class="notes-list" id="notes-list">
+      <!-- Search bar -->
+      <div class="container search-container mt-2">
+        <input type="text" id="search-item" placeholder="Search for books, notes and more" onkeyup="searchNotes()">
+      </div>
+      <!-- row 1 -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Object Oriented Programming</p>
+                <button onclick="pdfView('./Books/OOPS.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/OOPS.pdf','Object Oriented Programming.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Computer Graphics</p>
+                <button onclick="pdfView('./Books/CG.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/CG.pdf','Computer Graphics.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Electronics and Communication</h5>
+                <p class="card-text">Computer Organization and Architecture</p>
+                <button onclick="pdfView('./Books/COA.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/COA.pdf','Computer Organization and Architecture.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 2 -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Mathematics</h5>
+                <p class="card-text">Discrete Mathematical Structures</p>
+                <button onclick="pdfView('./Books/DMS.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/DMS.pdf','Discrete Mathematical Structures.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Mathematics</h5>
+                <p class="card-text">Applied Statistics</p>
+                <button onclick="pdfView('./Books/Stats.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/Stats.pdf','Applied Statistics.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Mathematics</h5>
+                <p class="card-text">Linear Algebra</p>
+                <button onclick="pdfView('./Books/LA.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/LA.pdf','Linear Algebra.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 3 -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Database Management Systems</p>
+                <button onclick="pdfView('./Books/DBMS.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/DBMS.pdf','Database Management Systems.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Operating Systems</p>
+                <button onclick="pdfView('./Books/OS.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/OS.pdf','Operating Systems.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Computer Networks</p>
+                <button onclick="pdfView('./Books/CN.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/CN.pdf','Computer Networks.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 4 -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Secure Coding</p>
+                <button onclick="pdfView('./Books/SC.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/SC.pdf','Secure Coding.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Foundations for Data Analytics</p>
+                <button onclick="pdfView('./Books/FDA.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/FDA.pdf','Foundations for Data Analytics.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Vulnerability Assessment for App Security</p>
+                <button onclick="pdfView('./Books/VAPT.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/VAPT.pdf','Vulnerability Assessment for App Security.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 5 -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Mathematics</h5>
+                <p class="card-text">Numerical Methods for Engineers</p>
+                <button onclick="pdfView('./Books/NMFE.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/NMFE.pdf','Numerical Methods.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Mathematics</h5>
+                <p class="card-text">Graph Theory</p>
+                <button onclick="pdfView('./Books/GTA.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/GTA.pdf','Graph Theory.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Cybersecurity</p>
+                <button onclick="pdfView('./Books/CyberSec.pdf#toolbar=0&view=FitH')"
+                  class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/CyberSec.pdf','Cybersecurity.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 6 -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Software Engineering</p>
+                <button onclick="pdfView('./Books/SWE.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/SWE.pdf','Software Engineering.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Design and Analysis of Algorithms</p>
+                <button onclick="pdfView('./Books/DAA.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/DAA.pdf','Design and Analysis of Algorithms.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Introduction to Machine Learning</p>
+                <button onclick="pdfView('./Books/ML.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/ML.pdf','Machine Learning.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 7 -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Team Software Process</p>
+                <button onclick="pdfView('./Books/TSP.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/TSP.pdf','Team Software Process.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Cloud Computing</p>
+                <button onclick="pdfView('./Books/CC.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/CC.pdf','Cloud Computing.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Android Development</p>
+                <a href="https://github.com/GudiVaraprasad/Android-Practice" target="_blank"
+                  class="btn btn-success">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 8 -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Theory of Computation</p>
+                <button onclick="pdfView('./Books/ToC.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/ToC.pdf','Theory of Computation.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Deep Learning</p>
+                <button onclick="pdfView('./Books/DL.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/DL.pdf','Deep Learning.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Soft Computing</p>
+                <button onclick="pdfView('./Books/SCP.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/SCP.pdf','Soft Computing.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 9 -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Electronics and Communication</h5>
+                <p class="card-text">Information Theory Coding</p>
+                <button onclick="pdfView('./Books/ITC.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/ITC.pdf','Information Theory Coding.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Web Technologies</p>
+                <button onclick="pdfView('./Books/WT.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/WT.pdf','Web Technologies.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mynotes">
+            <div class="card bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Computer Science</h5>
+                <p class="card-text">Data Science</p>
+                <button onclick="pdfView('./Books/DSc.pdf#toolbar=0&view=FitH')" class="btn btn-success">View</button>
+                <button onclick="pdfDownload('./Books/DSc.pdf','Data Science.pdf')"
+                  class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer to full width -->
+    <div style="font-size: 1.6rem;" class="my-5 mb-0">
+      <!-- Footer -->
+      <footer class="text-center text-white" style="background-color: #131313">
+        <!-- Grid container -->
+        <div class="container">
+          <!-- Section: Links -->
+          <div class="mt-5">
+            <!-- Grid row-->
+            <div class="row text-center d-flex justify-content-center pt-5">
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h3 class="text-uppercase font-weight-bold">
+                  <a style="color: rgb(224, 218, 218);" href="index.html">Prasad Books</a>
+                </h3>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h3 class="text-uppercase font-weight-bold">
+                  <a style="color: rgb(224, 218, 218);" href="https://gudivaraprasad.github.io">About me</a>
+                </h3>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h3 class="text-uppercase font-weight-bold">
+                  <a style="color: rgb(224, 218, 218);" href=".https://gudivaraprasad.github.io/Projects">My
+                    Projects</a>
+                </h3>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h3 class="text-uppercase font-weight-bold">
+                  <a style="color: rgb(224, 218, 218);" href="https://dev.to/varaprasad_gudi">Blog</a>
+                </h3>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h3 class="text-uppercase font-weight-bold">
+                  <a style="color: rgb(224, 218, 218);" href="https://forms.gle/GrnGqB2hGRHjznZh6">Contact</a>
+                </h3>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row-->
+          </div>
+          <!-- Section: Links -->
+
+          <hr class="my-5" />
+
+          <!-- Section: Text -->
+          <div class="mb-5">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-8">
+                <p style="color: rgba(255, 255, 255, 0.726)">
+                  <b style="color: rgba(255, 255, 255, 0.904);">Prasad Books</b> aims to provide hand written notes to
+                  students from computer science background.
+                </p>
+                <p style="color: rgba(255, 255, 255, 0.726)">Started in 2021, developed by Gudi Varaprasad; Prasad
+                  Books is now in its beginnings. Please keep
+                  visiting us for new and updated books. We are currently working more on improving our services.
+                  If you have any questions or comments, Please don't hesitate to contact us.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Section: Text -->
+
+          <!-- Section: Social -->
+          <div class="text-center mb-5">
+            <a target="_blank" href="https://www.facebook.com/Varaprasad.Gudi/" class="text-white me-5">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a target="_blank" href="https://twitter.com/Gudi_Varaprasad" class="text-white me-5">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCR2gr-sBjqnH0gW-Ca6i7Hw?sub_confirmation=1"
+              class="text-white me-5">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/crypto._kid/" class="text-white me-5">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/varaprasad-gudi-0007b4129/" class="text-white me-5">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/GudiVaraprasad" class="text-white me-5">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://github.com/GudiVaraprasad/GVP" class="text-white me-5">
+              <i class="fas fa-user-tie"></i>
+            </a>
+          </div>
+          <!-- Section: Social -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="color: rgba(211, 206, 206, 0.6); background-color: #101111">
+          Developed with &#x2764; by
+          <a style="color: rgb(224, 218, 218);" href="">Varaprasad</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </div>
+    <!-- End of .Footer -->
+
+
+    <!-- scroll top button  -->
+
+    <a style="color:#16b116;" href="#project" class="top">
+      <!-- <img src="scroll-top-img.png" alt="scrollimg"> -->
+      <i class="fas fa-chevron-up fa-4x mx-3"></i>
+    </a>
+
+    <!-- <a style="color:#16b116;" href="/Profilehttps://gudivaraprasad.github.io/GVP" class="goback">
+    <i class="fas fa-chevron-up fa-4x mx-3"></i>
+  </a> -->
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+
+    <!-- pdf open js file  -->
+    <script src="openPDF.js"></script>
+
+    <!-- search function for notes and books -->
+    <script>
+      const searchNotes = () => {
+        const searchbox = document.getElementById("search-item").value.toUpperCase();
+        const storenotes = document.getElementById("notes-list");
+        const notes = document.querySelectorAll(".mynotes");
+        const nname = document.getElementsByTagName("p");
+
+        for (var i = 0; i < nname.length; i++) {
+          let match = notes[i].getElementsByTagName('p')[0];
+
+          if (match) {
+            let textvalue = match.textContent || match.innerHTML;
+
+            if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
+              notes[i].style.display = "";
+            } else {
+              notes[i].style.display = "none";
+            }
+          }
+        }
+      }
+
+      function pdfView(tempVar) {
+        var element = document.getElementById('project');
+        var x = document.getElementById('projectTemp');
+        var y = '';
+        y += '<embed style="height: 96vh" src="' + tempVar + '" width="100%" />';
+        document.getElementById('projectTemp').innerHTML = y;
+        x.classList.remove('none');
+        element.classList.add('none');
+        x.style.overflow = "hidden";
+      }
+
+      /* Helper function - download PDF*/
+      function pdfDownload(fileURL, fileName) {
+        // for non-IE
+        if (!window.ActiveXObject) {
+          var save = document.createElement('a');
+          save.href = fileURL;
+          save.target = '_blank';
+          var filename = fileURL.substring(fileURL.lastIndexOf('/') + 1);
+          save.download = fileName || filename;
+          if (navigator.userAgent.toLowerCase().match(/(ipad|iphone|safari)/) && navigator.userAgent.search("Chrome") < 0) {
+            document.location = save.href;
+            // window event not working here
+          } else {
+            var evt = new MouseEvent('click', {
+              'view': window,
+              'bubbles': true,
+              'cancelable': false
+            });
+            save.dispatchEvent(evt);
+            (window.URL || window.webkitURL).revokeObjectURL(save.href);
+          }
+        }
+
+        // for IE < 11
+        else if (!!window.ActiveXObject && document.execCommand) {
+          var _window = window.open(fileURL, '_blank');
+          _window.document.close();
+          _window.document.execCommand('SaveAs', true, fileName || fileURL)
+          _window.close();
+        }
+      }
+      /* download PDF*/
+    </script>
+
+
+</body>
+
+</html>
